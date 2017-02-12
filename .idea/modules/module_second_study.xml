@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_second_study" default="compile.module.second_study">
+  <dirname property="module.second_study.basedir" file="${ant.file.module_second_study}"/>
+  
+  <property name="module.jdk.home.second_study" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.second_study" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.second_study" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.second_study" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="second_study.output.dir" value="${module.second_study.basedir}/../../out/production/Second_study"/>
+  <property name="second_study.testoutput.dir" value="${module.second_study.basedir}/../../out/test/Second_study"/>
+  
+  <path id="second_study.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="second_study.module.production.classpath">
+    <path refid="${module.jdk.classpath.second_study}"/>
+  </path>
+  
+  <path id="second_study.runtime.production.module.classpath">
+    <pathelement location="${second_study.output.dir}"/>
+  </path>
+  
+  <path id="second_study.module.classpath">
+    <path refid="${module.jdk.classpath.second_study}"/>
+    <pathelement location="${second_study.output.dir}"/>
+  </path>
+  
+  <path id="second_study.runtime.module.classpath">
+    <pathelement location="${second_study.testoutput.dir}"/>
+    <pathelement location="${second_study.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.second_study">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.second_study">
+    <patternset refid="excluded.from.module.second_study"/>
+  </patternset>
+  
+  
+  <target name="compile.module.second_study" depends="compile.module.second_study.production,compile.module.second_study.tests" description="Compile module Second_study"/>
+  
+  <target name="compile.module.second_study.production" depends="register.custom.compilers" description="Compile module Second_study; production classes"/>
+  
+  <target name="compile.module.second_study.tests" depends="register.custom.compilers,compile.module.second_study.production" description="compile module Second_study; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.second_study" description="cleanup module">
+    <delete dir="${second_study.output.dir}"/>
+    <delete dir="${second_study.testoutput.dir}"/>
+  </target>
+</project>

@@ -19,8 +19,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Second_study_main" target="1.5" />
-      <module name="Second_study_test" target="1.5" />
+      <module name="eeeee_main" target="1.8" />
+      <module name="eeeee_test" target="1.8" />
+      <module name="Second_study_main" target="1.8" />
+      <module name="Second_study_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

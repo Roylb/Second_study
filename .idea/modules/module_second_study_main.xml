@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_second_study_main" default="compile.module.second_study_main">
+  <dirname property="module.second_study_main.basedir" file="${ant.file.module_second_study_main}"/>
+  
+  <property name="module.jdk.home.second_study_main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.second_study_main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.second_study_main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.second_study_main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="second_study_main.output.dir" value="${module.second_study_main.basedir}/../../build/classes/main"/>
+  <property name="second_study_main.testoutput.dir" value="${module.second_study_main.basedir}/../../build/classes/main"/>
+  
+  <path id="second_study_main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="second_study_main.module.production.classpath">
+    <path refid="${module.jdk.classpath.second_study_main}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-web:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-tomcat:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-validation:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-web:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-webmvc:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-core:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-el:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-websocket:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.6.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jcl-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:log4j-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.gradle:_org.jboss.logging:jboss-logging:3.3.0.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+  </path>
+  
+  <path id="second_study_main.runtime.production.module.classpath">
+    <pathelement location="${second_study_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-web:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-tomcat:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-validation:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-web:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-webmvc:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-core:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-el:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-websocket:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.6.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jcl-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:log4j-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.gradle:_org.jboss.logging:jboss-logging:3.3.0.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+  </path>
+  
+  <path id="second_study_main.module.classpath">
+    <path refid="${module.jdk.classpath.second_study_main}"/>
+    <pathelement location="${second_study_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-web:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-tomcat:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-validation:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-web:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-webmvc:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-core:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-el:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-websocket:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.6.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jcl-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:log4j-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.gradle:_org.jboss.logging:jboss-logging:3.3.0.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+  </path>
+  
+  <path id="second_study_main.runtime.module.classpath">
+    <pathelement location="${second_study_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-web:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-tomcat:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-validation:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-web:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-webmvc:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:1.3.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-core:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-el:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.apache.tomcat.embed:tomcat-embed-websocket:8.0.37.classpath"/>
+    <path refid="library.gradle:_org.hibernate:hibernate-validator:5.2.4.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.6.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.6.7.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:4.2.8.release.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jcl-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_org.slf4j:log4j-over-slf4j:1.7.21.classpath"/>
+    <path refid="library.gradle:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.gradle:_org.jboss.logging:jboss-logging:3.3.0.final.classpath"/>
+    <path refid="library.gradle:_com.fasterxml:classmate:1.1.0.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.second_study_main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.second_study_main">
+    <patternset refid="excluded.from.module.second_study_main"/>
+  </patternset>
+  
+  
+  <target name="compile.module.second_study_main" depends="compile.module.second_study_main.production,compile.module.second_study_main.tests" description="Compile module Second_study_main"/>
+  
+  <target name="compile.module.second_study_main.production" depends="register.custom.compilers" description="Compile module Second_study_main; production classes"/>
+  
+  <target name="compile.module.second_study_main.tests" depends="register.custom.compilers,compile.module.second_study_main.production" description="compile module Second_study_main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.second_study_main" description="cleanup module">
+    <delete dir="${second_study_main.output.dir}"/>
+    <delete dir="${second_study_main.testoutput.dir}"/>
+  </target>
+</project>
