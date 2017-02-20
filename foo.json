@@ -2,10 +2,10 @@
   {
     "request": {
       "uri": "/test",
-      "method": "GET"
+      "method": "POST"
     },
     "response": {
-      "json":"js"
+      "json": "helloWord!"
     }
   }
 ]
