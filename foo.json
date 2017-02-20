@@ -1,0 +1,11 @@
+[
+  {
+    "request": {
+      "uri": "/test",
+      "method": "GET"
+    },
+    "response": {
+      "json":"js"
+    }
+  }
+]
